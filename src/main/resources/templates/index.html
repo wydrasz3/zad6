@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Spring web application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     Hello world !!!<br /><br />
-<input name="button1" value="Kliknij" type = "button" onclick="alert('Kliknieto')"/>
-<br />
-<form action="" method="get">
-    <input name="button1" value="Odbierz dane z serwera" type = "submit" />
-</form>
+<div class="container">
+    <input name="button1" value="Kliknij" type = "button" onclick="alert('Kliknieto')" class="btn btn-primary"/>
 
-<div th:text="${mojAtrybut}"></div>
+    <button onClick="window.location.reload();" class="btn btn-secondary">Refresh Page</button>
+    <br /><br />
+    <form action="" method="post">
+        <input name="button1" value="Odbierz dane z serwera" type = "submit" class="btn btn-primary"/>
+    </form>
+
+    <div th:text="${mojAtrybut}"></div>
+</div>
 </body>
 </html>
